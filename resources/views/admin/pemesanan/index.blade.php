@@ -1,12 +1,12 @@
-<?php if($pemesanan) { ?>  
+<?php if($pemesanan) { ?>
 <div class="row">
 <div class="col-md-6">
-    <form action="{{ asset('admin/pemesanan/cari') }}" method="get" accept-charset="utf-8">
+    <form action="{{ asset('admin_assets/pemesanan/cari') }}" method="get" accept-charset="utf-8">
     <div class="input-group mb-3">
       <input type="text" class="form-control" name="keywords" value="<?php if(isset($_GET['keywords'])) { echo $_GET['keywords']; } ?>" placeholder="Cari..." required>
       <span class="input-group-append">
             <button type="submit" name="cari" class="btn btn-info" value="cari">Cari</button>
-            <a href="{{ asset('admin/pemesanan/tambah') }}" class="btn btn-success ">
+            <a href="{{ asset('admin_assets/pemesanan/tambah') }}" class="btn btn-success ">
               <i class="fa fa-plus"></i> Tambah Baru
             </a>
       </span>
@@ -19,7 +19,7 @@
 
 </div>
 
-<form action="{{ asset('admin/pemesanan/proses') }}" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin_assets/pemesanan/proses') }}" method="post" accept-charset="utf-8">
   {{ csrf_field() }}
 <input type="hidden" name="pengalihan" value="{{ url()->full() }}">
 <div class="row">
@@ -35,7 +35,7 @@
       <option value="Konfirmasi">Konfirmasi</option>
       <option value="Dikirim">Dikirim</option>
       <option value="Selesai">Selesai</option>
-    </select>  
+    </select>
     <span class="input-group-append">
       <button class="btn btn-success " type="submit" name="status" value="status">
         <i class="fa fa-save"></i> Update Status
@@ -43,7 +43,7 @@
     </span>
   </div>
 <div class="input-group mb-3 col-md-8">
-    
+
     <select name="status_pemesanan_filter" class="form-control">
       <option value="Semua">Semua Status</option>
       <option value="Menunggu">Menunggu</option>
@@ -88,7 +88,7 @@
 </thead>
 <tbody>
 
-  <?php 
+  <?php
   // Looping data user dg foreach
   $i=1;
   foreach($pemesanan as $pemesanan) {
@@ -103,7 +103,7 @@
         </div>
     </td>
     <td>
-      <?php 
+      <?php
       if($pemesanan->status_pemesanan=='Menunggu') {
         $class = 'btn-warning';
         $icon   = 'fa-hourglass';
@@ -121,7 +121,7 @@
         $icon   = 'fa-check-circle';
       }
       ?>
-      <a href="{{ asset('admin/pemesanan/status_pemesanan/'.$pemesanan->status_pemesanan) }}" class="btn btn-sm btn-block {{ $class }}">
+      <a href="{{ asset('admin_assets/pemesanan/status_pemesanan/'.$pemesanan->status_pemesanan) }}" class="btn btn-sm btn-block {{ $class }}">
         <i class="fa  {{ $icon }}"></i> <?php echo $pemesanan->status_pemesanan ?>
       </a>
       <small>
@@ -147,8 +147,8 @@
       <small>
         <br><i class="fas fa-tags"></i> Kat: <?php echo $pemesanan->nama_kategori_produk ?>
         <br><i class="fas fa-tag"></i> Harga: Rp <?php echo number_format($pemesanan->harga_jual) ?>
-        <br><i class="fas fa-image"></i> Gambar: 
-        <br><img src="{{ asset('public/upload/image/thumbs/'.$pemesanan->gambar) }}" class="img img-responsive img-thumbnail">
+        <br><i class="fas fa-image"></i> Gambar:
+        <br><img src="{{ asset('upload/image/thumbs/'.$pemesanan->gambar) }}" class="img img-responsive img-thumbnail">
       </small>
     <?php } ?>
     </td>
@@ -169,19 +169,19 @@
         <br><i class="fas fa-sort-numeric-up-alt"></i> Dari Rek: <?php echo $pemesanan->nomor_rekening_pengirim ?>
         <br><i class="fas fa-user"></i> A.N: <?php echo $pemesanan->pengirim ?>
         <br><i class="fas fa-plus"></i> Jml Bayar: Rp <?php echo number_format($pemesanan->jumlah) ?>
-        <br><i class="fas fa-upload"></i> Bukti: <?php if($pemesanan->bukti !="") { ?><a href="{{ asset('public/upload/image/thumbs/'.$pemesanan->bukti) }}" target="_blank"><?php echo $pemesanan->bukti ?></a><?php }else{ echo '-'; } ?>
+        <br><i class="fas fa-upload"></i> Bukti: <?php if($pemesanan->bukti !="") { ?><a href="{{ asset('upload/image/thumbs/'.$pemesanan->bukti) }}" target="_blank"><?php echo $pemesanan->bukti ?></a><?php }else{ echo '-'; } ?>
       </small>
     </td>
-    
+
     <td>
       <div class="btn-group">
-        <a href="{{ asset('admin/pemesanan/edit/'.$pemesanan->id_pemesanan) }}" class="btn btn-success btn-block btn-sm"><i class="fa fa-check"></i> Update Status</a>
+        <a href="{{ asset('admin_assets/pemesanan/edit/'.$pemesanan->id_pemesanan) }}" class="btn btn-success btn-block btn-sm"><i class="fa fa-check"></i> Update Status</a>
       </div>
       <div class="clearfix"><hr></div>
       <div class="btn-group">
-        <a href="{{ asset('admin/pemesanan/detail/'.$pemesanan->id_pemesanan) }}" class="btn btn-secondary btn-sm" target="_blank"><i class="fa fa-eye"></i></a>
-        <a href="{{ asset('admin/pemesanan/cetak/'.$pemesanan->id_pemesanan) }}" class="btn btn-info btn-sm" target="_blank"><i class="fa fa-print"></i></a>
-        <a href="{{ asset('admin/pemesanan/delete/'.$pemesanan->id_pemesanan) }}" class="btn btn-danger btn-sm delete-link"><i class="fas fa-trash-alt"></i></a>
+        <a href="{{ asset('admin_assets/pemesanan/detail/'.$pemesanan->id_pemesanan) }}" class="btn btn-secondary btn-sm" target="_blank"><i class="fa fa-eye"></i></a>
+        <a href="{{ asset('admin_assets/pemesanan/cetak/'.$pemesanan->id_pemesanan) }}" class="btn btn-info btn-sm" target="_blank"><i class="fa fa-print"></i></a>
+        <a href="{{ asset('admin_assets/pemesanan/delete/'.$pemesanan->id_pemesanan) }}" class="btn btn-danger btn-sm delete-link"><i class="fas fa-trash-alt"></i></a>
       </div>
     </td>
   </tr>

@@ -26,7 +26,7 @@
       <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#Edit<?php echo $kategori_download->id_kategori_download ?>">
     <i class="fa fa-edit"></i> Edit
 </button>
-      <a href="{{ asset('admin/kategori_download/delete/'.$kategori_download->id_kategori_download) }}" class="btn btn-danger btn-sm delete-link"><i class="fas fa-trash-alt"></i> Hapus</a>
+      <a href="{{ asset('admin_assets/kategori_download/delete/'.$kategori_download->id_kategori_download) }}" class="btn btn-danger btn-sm delete-link"><i class="fas fa-trash-alt"></i> Hapus</a>
       </div>
       @include('admin/kategori_download/edit')
     </td>

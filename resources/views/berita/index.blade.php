@@ -10,16 +10,16 @@
               <h1 class="text-center"><?php echo $title ?></h1>
               <hr>
             </div>
-              
 
-            <?php  
+
+            <?php
             if($beritas) {
             foreach($beritas as $berita) { ?>
             <div class="col-lg-12 col-md-12 col-sm-12 mb-4 berita">
               <div class="row">
                   <figure class="thumnail col-md-4">
                     <a href="{{ asset('berita/detail/'.$berita->slug_berita) }}">
-                      <img src="{{ asset('public/upload/image/thumbs/'.$berita->gambar) }}" alt="<?php  echo $berita->judul_berita ?>" class="img-fluid img-thumbnail">
+                      <img src="{{ asset('upload/image/thumbs/'.$berita->gambar) }}" alt="<?php  echo $berita->judul_berita ?>" class="img-fluid img-thumbnail">
                     </a>
                   </figure>
                   <div class="keterangan col-md-8">
@@ -33,11 +33,11 @@
                       <p>
                         <input type="hidden" name="quantity" id="<?php echo $berita->id_berita;?>" value="1" class="quantity">
                         <a href="{{ asset('berita/read/'.$berita->slug_berita) }}" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
-                          
+
                       </p>
                   </div>
                   </div>
-                  
+
                 </div>
             </div>
           <?php } ?>
@@ -57,7 +57,7 @@
             <hr>
           </div>
             <div class="col-md-12">
-              
+
             </div>
       </div>
     </div>

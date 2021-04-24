@@ -1,5 +1,5 @@
 <p class="text-right">
-  <a href="{{ asset('admin/berita') }}" class="btn btn-success btn-sm">
+  <a href="{{ asset('admin_assets/berita') }}" class="btn btn-success btn-sm">
     <i class="fa fa-backward"></i> Kembali
   </a>
 </p>
@@ -14,7 +14,7 @@
     </div>
 @endif
 
-<form action="{{ asset('admin/berita/edit_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+<form action="{{ asset('admin_assets/berita/edit_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 {{ csrf_field() }}
 <input type="hidden" name="id_berita" value="{{ $berita->id_berita }}">
 <div class="row form-group">
@@ -89,7 +89,7 @@
 </div>
 
 <div class="row form-group">
-  <label class="col-md-3">Isi berita</label> 
+  <label class="col-md-3">Isi berita</label>
   <div class="col-md-9">
   <textarea name="isi" class="form-control konten" placeholder="Isi berita" placeholder="Isi berita"><?php echo $berita->isi ?></textarea>
   </div>

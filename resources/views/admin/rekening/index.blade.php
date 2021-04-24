@@ -10,7 +10,7 @@
 <p>
   @include('admin/rekening/tambah')
 </p>
-<form action="{{ asset('admin/rekening/proses') }}" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin_assets/rekening/proses') }}" method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 <div class="row">
 
@@ -18,7 +18,7 @@
     <div class="btn-group">
       <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >
           <i class="fa fa-trash"></i>
-      </button> 
+      </button>
         <button type="button" class="btn btn-success " data-toggle="modal" data-target="#Tambah">
             <i class="fa fa-plus"></i> Tambah Baru
         </button>
@@ -59,7 +59,7 @@
     </td>
       <td>
         <?php if($rekening->gambar != "") { ?>
-            <img src="{{ asset('public/upload/image/thumbs/'.$rekening->gambar) }}" width="60" class="img img-responsive">
+            <img src="{{ asset('upload/image/thumbs/'.$rekening->gambar) }}" width="60" class="img img-responsive">
         <?php }else{ echo 'Tidak ada'; } ?>
     </td>
 
@@ -69,10 +69,10 @@
     <td><?php echo $rekening->urutan ?></td>
     <td>
         <div class="btn-group">
-        <a href="{{ asset('admin/rekening/edit/'.$rekening->id_rekening) }}" 
+        <a href="{{ asset('admin_assets/rekening/edit/'.$rekening->id_rekening) }}"
           class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
 
-          <a href="{{ asset('admin/rekening/delete/'.$rekening->id_rekening) }}" class="btn btn-danger btn-sm  delete-link">
+          <a href="{{ asset('admin_assets/rekening/delete/'.$rekening->id_rekening) }}" class="btn btn-danger btn-sm  delete-link">
             <i class="fa fa-trash"></i></a>
         </div>
 

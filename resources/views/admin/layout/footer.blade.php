@@ -1,4 +1,4 @@
-<?php 
+<?php
 $sek  = date('Y');
 $awal = $sek-100;
 ?>
@@ -132,7 +132,7 @@ tinymce.init({
 //   filemanager_title: "Responsive Filemanager",
 //   external_plugins: {
 //     "responsivefilemanager": "plugins/responsivefilemanager/plugin.min.js",
-//     "filemanager": "{{ asset('public/filemanager/plugin.min.js') }}"
+//     "filemanager": "{{ asset('filemanager/plugin.min.js') }}"
 //     // "filemanager": "../../filemanager/plugin.min.js"
 //   },
 //  });
@@ -188,15 +188,15 @@ tinymce.init({
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="{{ asset('public/admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('admin_assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <!-- Core plugin JavaScript-->
-  <script src="{{ asset('public/admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+  <script src="{{ asset('admin_assets/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
   <!-- Custom scripts for all pages-->
-  <script src="{{ asset('public/admin/js/sb-admin-2.min.js') }}"></script>
+  <script src="{{ asset('admin_assets/js/sb-admin-2.min.js') }}"></script>
   <!-- Page level plugins -->
-  <script src="{{ asset('public/admin/vendor/datatables/jquery.dataTables.min.js') }}"></script>
-  <script src="{{ asset('public/admin/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+  <script src="{{ asset('admin_assets/vendor/datatables/jquery.dataTables.min.js') }}"></script>
+  <script src="{{ asset('admin_assets/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
   <!-- Page level custom scripts -->
-  <script src="{{ asset('public/admin/js/demo/datatables-demo.js') }}"></script>
+  <script src="{{ asset('admin_assets/js/demo/datatables-demo.js') }}"></script>
 </body>
 </html>

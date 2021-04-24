@@ -16,7 +16,7 @@
               </div>
               <div class="col-lg-5 order-1 order-lg-2 hero-img text-center" data-aos="zoom-out" data-aos-delay="300">
                 <div class="slideku">
-                  <p class="text-center"><img src="{{ asset('public/upload/image/'.$slider->gambar) }}" class="img img-fluid animated" alt="<?php echo $slider->judul_galeri ?>"></p>
+                  <p class="text-center"><img src="{{ asset('upload/image/'.$slider->gambar) }}" class="img img-fluid animated" alt="<?php echo $slider->judul_galeri ?>"></p>
                 </div>
               </div>
             </div>
@@ -48,7 +48,7 @@
 
         <div class="row">
           <div class="col-xl-4 col-lg-6 d-flex justify-content-center align-items-stretch" data-aos="fade-right">
-            <img src="{{ asset('public/upload/image/'.$site->icon) }}" alt="{{ $site->namaweb }}" class="img img-fluid img-thumbnail">
+            <img src="{{ asset('upload/image/'.$site->icon) }}" alt="{{ $site->namaweb }}" class="img img-fluid img-thumbnail">
           </div>
 
           <div class="col-xl-8 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
@@ -65,7 +65,7 @@
 <!-- ======= Apa itu Nitrico? Section ======= -->
 <section id="apa-itu-nitrico" class="about">
 
-      
+
   <div class="container">
     <div class="col-xl-12 col-lg-12 col-md-12 text-center" data-aos="fade-up">
           <h2>Produk <?php $site->namaweb ?></h2>
@@ -74,13 +74,13 @@
     </div>
         <!-- START -->
     <div class="row">
-      <?php  
+      <?php
             if($produks) {
             foreach($produks as $produk) { ?>
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4 produk text-center">
                   <figure class="thumnail">
                     <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}">
-                      <img src="{{ asset('public/upload/image/'.$produk->gambar) }}" alt="<?php  echo $produk->nama_produk ?>" class="img-fluid img-thumbnail">
+                      <img src="{{ asset('upload/image/'.$produk->gambar) }}" alt="<?php  echo $produk->nama_produk ?>" class="img-fluid img-thumbnail">
                     </a>
                   </figure>
                   <div class="keterangan">
@@ -101,7 +101,7 @@
                     </p>
                 </div>
             </div>
-            
+
           <?php } ?>
           <div class="clearfix"></div>
             <div class="col-md-12">
@@ -113,7 +113,7 @@
             <p class="alert alert-info">Produk tidak ditemukan. Gunakan kata kunci pencarian yang berbeda.</p>
           </div>
           <?php } ?>
-          
+
     </div>
     <!-- END -->
     </div>
@@ -132,13 +132,13 @@
 
         <div class="row">
 
-          <?php  
+          <?php
             if($berita) {
             foreach($berita as $berita) { ?>
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4 berita">
                   <figure class="thumnail">
                     <a href="{{ asset('berita/detail/'.$berita->slug_berita) }}">
-                      <img src="{{ asset('public/upload/image/thumbs/'.$berita->gambar) }}" alt="<?php  echo $berita->judul_berita ?>" class="img-fluid img-thumbnail">
+                      <img src="{{ asset('upload/image/thumbs/'.$berita->gambar) }}" alt="<?php  echo $berita->judul_berita ?>" class="img-fluid img-thumbnail">
                     </a>
                   </figure>
                   <div class="keterangan">
@@ -152,11 +152,11 @@
                       <p>
                         <input type="hidden" name="quantity" id="<?php echo $berita->id_berita;?>" value="1" class="quantity">
                         <a href="{{ asset('berita/read/'.$berita->slug_berita) }}" class="btn btn-success btn-sm"><i class="fa fa-search"></i> Baca Detail...</a>
-                          
+
                       </p>
                   </div>
                   </div>
-                  
+
             </div>
           <?php }}else{ ?>
           <div class="col-md-12">
@@ -168,7 +168,7 @@
             <p class="text-center">
               <a href="{{ asset('berita') }}" class="btn btn-info"><i class="fa fa-newspaper"></i> Lihat berita lainnya...</a>
             </p>
-            
+
           </div>
         </div>
 

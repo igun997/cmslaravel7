@@ -19,7 +19,7 @@ $nav_pemesanan        = DB::table('pemesanan')
       <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
         <i class="fa fa-bars"></i>
       </button>
-      <a href="{{ asset('admin/dasbor') }}" class="btn btn-sm"><i class="fa fa-tachometer-alt"></i> Dasbor</a> 
+      <a href="{{ asset('admin/dasbor') }}" class="btn btn-sm"><i class="fa fa-tachometer-alt"></i> Dasbor</a>
       <a href="{{ asset('/') }}" class="btn btn-sm" target="_blank"><i class="fa fa-home"></i> Beranda</a>
       <!-- Topbar Navbar -->
       <ul class="navbar-nav ml-auto">
@@ -56,10 +56,10 @@ $nav_pemesanan        = DB::table('pemesanan')
             <h6 class="dropdown-header">
               Terdapat <?php if($nav_pemesanan) { echo count($nav_pemesanan); }else{ echo 0; } ?> Order Baru
             </h6>
-            <?php foreach($nav_pemesanan as $nav_pemesanan) { ?>     
+            <?php foreach($nav_pemesanan as $nav_pemesanan) { ?>
               <a class="dropdown-item d-flex align-items-center" href="{{ asset('admin/pemesanan/detail/'.$nav_pemesanan->id_pemesanan) }}">
                   <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="{{ asset('public/upload/image/thumbs/'.$nav_pemesanan->gambar) }}" alt="">
+                    <img class="rounded-circle" src="{{ asset('upload/image/thumbs/'.$nav_pemesanan->gambar) }}" alt="">
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div class="font-weight-bold">
@@ -114,7 +114,7 @@ $nav_pemesanan        = DB::table('pemesanan')
 
       <!-- Page Heading -->
       <h1 class="h3 mb-2 text-gray-800">{{ $title }}</h1>
-      
+
 
       <!-- DataTales Example -->
       <div class="card shadow mb-4">

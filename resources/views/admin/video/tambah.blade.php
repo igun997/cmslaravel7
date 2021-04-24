@@ -8,7 +8,7 @@
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			</div>
 			<div class="modal-body">
-				<form action="{{ asset('admin/video/tambah') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+				<form action="{{ asset('admin_assets/video/tambah') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 				<div class="form-group row">
 					<label class="col-sm-3 control-label text-right">Judul Video</label>
@@ -16,7 +16,7 @@
 						<input type="text" name="judul" class="form-control" placeholder="Judul Video" value="{{ old('judul') }}" required>
 					</div>
 				</div>
-				
+
 
 				<div class="form-group row">
 					<label class="col-sm-3 control-label text-right">Kode Video Youtube</label>

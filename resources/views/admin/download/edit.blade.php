@@ -1,5 +1,5 @@
 <p class="text-right">
-	<a href="{{ asset('admin/download') }}" class="btn btn-success btn-sm">
+	<a href="{{ asset('admin_assets/download') }}" class="btn btn-success btn-sm">
 		<i class="fa fa-backward"></i> Kembali
 	</a>
 </p>
@@ -14,7 +14,7 @@
         </ul>
     </div>
 @endif
-<form action="{{ asset('admin/download/edit_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+<form action="{{ asset('admin_assets/download/edit_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 {{ csrf_field() }}
 <input type="hidden" name="id_download" value="{{ $download->id_download }}">
 <div class="row form-group">
@@ -29,7 +29,7 @@
 	<div class="col-md-9">
 		<select name="jenis_download" class="form-control">
 			<option value="Download">Download Biasa</option>
-			<option value="Panduan" 
+			<option value="Panduan"
 			<?php if($download->jenis_download=="Panduan") { echo "selected"; } ?>
 			>Panduan Penelitian</option>
 		</select>
@@ -41,7 +41,7 @@
 	<div class="col-md-9">
 		<select name="id_kategori_download" class="form-control">
 			<?php foreach($kategori_download as $kategori_download) { ?>
-				<option value="<?php echo $kategori_download->id_kategori_download ?>" 
+				<option value="<?php echo $kategori_download->id_kategori_download ?>"
 					<?php if($download->id_kategori_download==$kategori_download->id_kategori_download) { echo "selected"; } ?>
 					><?php echo $kategori_download->nama_kategori_download ?></option>
 				<?php } ?>

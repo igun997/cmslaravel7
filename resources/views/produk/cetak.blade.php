@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title><?php echo $title ?></title>
-	<link rel="stylesheet" href="{{ asset('public/css/print.css') }}" media="print">
-	<link rel="stylesheet" href="{{ asset('public/css/print.css') }}" media="screen">
+	<link rel="stylesheet" href="{{ asset('css/print.css') }}" media="print">
+	<link rel="stylesheet" href="{{ asset('css/print.css') }}" media="screen">
 </head>
 <body>
 	<div class="cetak">
@@ -24,9 +24,9 @@
         </tr>
       </tbody>
     </table>
-                    
 
-                    
+
+
 		<table class="table">
           <tbody>
     <tr>
@@ -57,10 +57,10 @@
       <td width="30%">Kategori</td>
       <td>: <?php echo $produk->nama_kategori_produk ?></td>
     </tr>
-    
+
     <tr>
       <td width="30%">Gambar</td>
-      <td>: <img src="{{ asset('public/upload/image/'.$produk->gambar) }}" class="img img-responsive" style="width: 25%; height: auto;"></td>
+      <td>: <img src="{{ asset('upload/image/'.$produk->gambar) }}" class="img img-responsive" style="width: 25%; height: auto;"></td>
     </tr>
     <tr>
       <td width="30%">Tanggal input</td>
@@ -82,7 +82,7 @@
               <?php echo $produk->isi;  ?>
                <hr>
 		<small>Tanggal cetak: <?php echo date('d-M-Y H:i:s') ?> - <?php echo $site->namaweb ?></small>
-		
+
 	</div>
 </body>
 </html>

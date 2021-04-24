@@ -8,7 +8,7 @@
     </div>
 @endif
 
-<form action="{{ asset('admin/rekening/proses_edit') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin_assets/rekening/proses_edit') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 <input type="hidden" name="id_rekening" value="<?php echo $rekening->id_rekening ?>">
 <div class="form-group row">
@@ -45,8 +45,8 @@
 	<label class="col-sm-3 control-label text-right">Logo bank</label>
 	<div class="col-sm-9">
 		<input type="file" name="gambar" class="form-control" placeholder="Gambar" value="<?php echo $rekening->gambar ?>">
-		<small class="text-gray">Logo: 
-			<br><img src="{{ asset('public/upload/image/thumbs/'.$rekening->gambar) }}" style="width: 80px height: auto;" class="img img-thumbnail">
+		<small class="text-gray">Logo:
+			<br><img src="{{ asset('upload/image/thumbs/'.$rekening->gambar) }}" style="width: 80px height: auto;" class="img img-thumbnail">
 		</small>
 	</div>
 </div>
@@ -57,7 +57,7 @@
 		<div class="form-group pull-right btn-group">
 			<input type="submit" name="submit" class="btn btn-primary " value="Simpan Data">
 			<input type="reset" name="reset" class="btn btn-success " value="Reset">
-			<a href="{{ asset('admin/rekening') }}" class="btn btn-danger">Kembali</a>
+			<a href="{{ asset('admin_assets/rekening') }}" class="btn btn-danger">Kembali</a>
 		</div>
 	</div>
 	<div class="clearfix"></div>

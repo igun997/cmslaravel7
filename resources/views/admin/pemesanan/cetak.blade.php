@@ -4,21 +4,21 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title><?php echo $title ?></title>
-	<link rel="stylesheet" href="{{ asset('public/css/print.css') }}" media="print">
-	<link rel="stylesheet" href="{{ asset('public/css/print.css') }}" media="screen">
-  <link href="{{ asset('public/admin/vendor/fontawesome-free/css/all.min.css') }}" media="print" rel="stylesheet" type="text/css">
-  <link href="{{ asset('public/admin/vendor/fontawesome-free/css/all.min.css') }}" media="screen" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="{{ asset('css/print.css') }}" media="print">
+	<link rel="stylesheet" href="{{ asset('css/print.css') }}" media="screen">
+  <link href="{{ asset('admin_assets/vendor/fontawesome-free/css/all.min.css') }}" media="print" rel="stylesheet" type="text/css">
+  <link href="{{ asset('admin_assets/vendor/fontawesome-free/css/all.min.css') }}" media="screen" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div class="cetak">
 		<h1 style="text-align: center;">TANDA PEMESANAN BARANG
-    <br>KODE TRANSAKSI: <?php echo $pemesanan->kode_transaksi ?>  
+    <br>KODE TRANSAKSI: <?php echo $pemesanan->kode_transaksi ?>
     </h1>
 
     <table class="printer">
   <thead>
     <tr class="bg-info">
-      
+
       <th>PENGIRIM (TOKO)</th>
       <th width="50%">DETAIL CUSTOMER (KEPADA)</th>
     </tr>
@@ -40,7 +40,7 @@
         <br>HP/WA: <?php echo $pemesanan->telepon_pemesan ?>
           <br>Email: <?php echo $pemesanan->email_pemesan ?>
       </td>
-      
+
     </tr>
   </tbody>
 </table>
@@ -70,8 +70,8 @@
           <small>
             <br><i class="fas fa-tags"></i> Kat: <?php echo $pemesanan->nama_kategori_produk ?>
             <br><i class="fas fa-tag"></i> Harga: Rp <?php echo number_format($pemesanan->harga_jual) ?>
-            <!-- <br><i class="fas fa-image"></i> Gambar: 
-            <br><img src="{{ asset('public/upload/image/thumbs/'.$pemesanan->gambar) }}" class="img img-responsive img-thumbnail"> -->
+            <!-- <br><i class="fas fa-image"></i> Gambar:
+            <br><img src="{{ asset('upload/image/thumbs/'.$pemesanan->gambar) }}" class="img img-responsive img-thumbnail"> -->
           </small>
         <?php } ?>
       </td>
@@ -119,7 +119,7 @@
 </table>
                <hr>
 		<small>Tanggal cetak: <?php echo date('d-M-Y H:i:s') ?> - <?php echo $site->namaweb ?> | <?php echo $site->website ?></small>
-		
+
 	</div>
 </body>
 </html>

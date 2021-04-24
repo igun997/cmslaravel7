@@ -1,11 +1,11 @@
 <p class="text-right">
-	<a href="{{ asset('admin/pemesanan/edit/'.$pemesanan->id_pemesanan) }}" class="btn btn-warning btn-sm">
+	<a href="{{ asset('admin_assets/pemesanan/edit/'.$pemesanan->id_pemesanan) }}" class="btn btn-warning btn-sm">
 		<i class="fa fa-edit"></i> Update Status
 	</a>
-	<a href="{{ asset('admin/pemesanan/cetak/'.$pemesanan->id_pemesanan) }}" class="btn btn-info btn-sm">
+	<a href="{{ asset('admin_assets/pemesanan/cetak/'.$pemesanan->id_pemesanan) }}" class="btn btn-info btn-sm">
 		<i class="fa fa-print"></i> Cetak
 	</a>
-	<a href="{{ asset('admin/pemesanan') }}" class="btn btn-success btn-sm">
+	<a href="{{ asset('admin_assets/pemesanan') }}" class="btn btn-success btn-sm">
 		<i class="fa fa-backward"></i> Kembali
 	</a>
 </p>
@@ -13,7 +13,7 @@
 <table class="table table-bordered">
 	<thead>
 		<tr class="bg-info">
-			
+
 			<th>PENGIRIM (TOKO)</th>
 			<th width="50%">DETAIL CUSTOMER (KEPADA)</th>
 		</tr>
@@ -35,7 +35,7 @@
 				<br><i class="fas fa-mobile"></i> HP/WA: <?php echo $pemesanan->telepon_pemesan ?>
 			  	<br><i class="fa fa-envelope"></i> Email: <?php echo $pemesanan->email_pemesan ?>
 			</td>
-			
+
 		</tr>
 	</tbody>
 </table>
@@ -65,8 +65,8 @@
 		      <small>
 		        <br><i class="fas fa-tags"></i> Kat: <?php echo $pemesanan->nama_kategori_produk ?>
 		        <br><i class="fas fa-tag"></i> Harga: Rp <?php echo number_format($pemesanan->harga_jual) ?>
-		        <!-- <br><i class="fas fa-image"></i> Gambar: 
-		        <br><img src="{{ asset('public/upload/image/thumbs/'.$pemesanan->gambar) }}" class="img img-responsive img-thumbnail"> -->
+		        <!-- <br><i class="fas fa-image"></i> Gambar:
+		        <br><img src="{{ asset('upload/image/thumbs/'.$pemesanan->gambar) }}" class="img img-responsive img-thumbnail"> -->
 		      </small>
 		    <?php } ?>
 			</td>
@@ -108,7 +108,7 @@
 		</tr>
 		<tr>
 			<td><i class="fas fa-upload"></i> Bukti</td>
-			<td><?php if($pemesanan->bukti !="") { ?><a href="{{ asset('public/upload/image/thumbs/'.$pemesanan->bukti) }}" target="_blank"><?php echo $pemesanan->bukti ?></a><?php }else{ echo '-'; } ?></td>
+			<td><?php if($pemesanan->bukti !="") { ?><a href="{{ asset('upload/image/thumbs/'.$pemesanan->bukti) }}" target="_blank"><?php echo $pemesanan->bukti ?></a><?php }else{ echo '-'; } ?></td>
 		</tr>
 	</tbody>
 </table>

@@ -7,8 +7,8 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 </div>
 <div class="modal-body">
-    
-<form action="{{ asset('admin/kategori_produk/edit') }}" enctype="multipart/form-data"  method="post" accept-charset="utf-8">
+
+<form action="{{ asset('admin_assets/kategori_produk/edit') }}" enctype="multipart/form-data"  method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 <input type="hidden" name="id_kategori_produk"   value="{{ $kategori_produk->id_kategori_produk }}">
 
@@ -18,7 +18,7 @@
 		<input type="file" name="gambar" class="form-control" placeholder="Upload Gambar" value="">
 		@if ($errors->has('gambar'))
 	      	<span class="text-danger">{{ $errors->first('gambar') }}</span>
-	    @endif  
+	    @endif
 	</div>
 </div>
 
@@ -35,7 +35,7 @@
 		<textarea name="keterangan" class="form-control simple" placeholder="Keterangan">{{ $kategori_produk->keterangan }}</textarea>
 		@if ($errors->has('keterangan'))
 	      	<span class="text-danger">{{ $errors->first('keterangan') }}</span>
-	    @endif  
+	    @endif
 	</div>
 </div>
 

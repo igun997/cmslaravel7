@@ -10,7 +10,7 @@
               <hr>
             </div>
             <div class="col-md-12 text-left">
-              
+
               <p class="text-center">Anda sudah melakukan pembayaran? Silakan lakukan <a href="{{ asset('pembayaran/konfirmasi') }}">Konfirmasi Pembayaran</a>.</p>
               <hr>
                 <?php echo $site->isi_pembayaran; ?>
@@ -30,7 +30,7 @@
                     <td class="text-center"><?php echo $i ?></td>
                     <td>
                       <?php if($rekening->gambar != "") { ?>
-                        <img src="{{ asset('public/upload/image/thumbs/'.$rekening->gambar) }}" width="60" class="img img-responsive">
+                        <img src="{{ asset('upload/image/thumbs/'.$rekening->gambar) }}" width="60" class="img img-responsive">
                       <?php }else{ echo 'Tidak ada'; } ?>
                     </td>
                     <td><?php echo $rekening->nama_bank ?></td>
@@ -41,7 +41,7 @@
                 </tbody>
               </table>
             </div>
-            
+
           </div>
         </div>
       </div>

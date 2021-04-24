@@ -8,7 +8,7 @@
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			</div>
 			<div class="modal-body">
-				<form action="{{ asset('admin/rekening/tambah') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+				<form action="{{ asset('admin_assets/rekening/tambah') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 				<div class="form-group row">
 					<label class="col-sm-3 control-label text-right">Nama bank</label>
@@ -17,14 +17,14 @@
 					</div>
 				</div>
 
-				
+
 				<div class="form-group row">
 					<label class="col-sm-3 control-label text-right">Nomor Rekening</label>
 					<div class="col-sm-9">
 						<input type="text" name="nomor_rekening" class="form-control" placeholder="Nomor Rekening" value="{{ old('nomor_rekening') }}" required>
 					</div>
 				</div>
-				
+
 
 				<div class="form-group row">
 					<label class="col-sm-3 control-label text-right">Atas Nama</label>

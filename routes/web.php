@@ -51,9 +51,7 @@ Route::get('produk/detail/{par1}', 'Produk@detail');
 Route::get('produk/cetak/{par1}', 'Produk@cetak');
 /* END FRONT END */
 /* BACK END */
-Route::group(['namespace' => 'Admin'], 
-function()
-{
+Route::group(['namespace' => 'Admin'],function(){
 	// dasbor
     Route::get('admin/dasbor', 'Dasbor@index');
     Route::get('admin/dasbor/konfigurasi', 'Dasbor@konfigurasi');

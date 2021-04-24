@@ -22,7 +22,7 @@ $site       = DB::table('konfigurasi')->first();
     });
     // Remove
     $(document).on('click','.romove_cart',function(){
-      var row_id=$(this).attr("id"); 
+      var row_id=$(this).attr("id");
       $.ajax({
         url : "{{ asset('/') }}keranjang/hapus",
         method : "POST",
@@ -32,7 +32,7 @@ $site       = DB::table('konfigurasi')->first();
         }
       });
     });
-    
+
   });
 </script>
 <script>
@@ -51,7 +51,7 @@ $site       = DB::table('konfigurasi')->first();
   })
 </script>
 <script>
-  
+
 </script>
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -130,15 +130,15 @@ $( ".tanggal" ).datepicker({
   yearRange: "1920:2020"
 });
 </script>
-  <script src="{{ asset('public/template/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('public/template/assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
-  <script src="{{ asset('public/template/assets/vendor/php-email-form/validate.js') }}"></script>
-  <script src="{{ asset('public/template/assets/vendor/venobox/venobox.min.js') }}"></script>
-  <script src="{{ asset('public/template/assets/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
-  <script src="{{ asset('public/template/assets/vendor/counterup/counterup.min.js') }}"></script>
-  <script src="{{ asset('public/template/assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
-  <script src="{{ asset('public/template/assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/venobox/venobox.min.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/counterup/counterup.min.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('template/assets/vendor/aos/aos.js') }}"></script>
   <!-- Template Main JS File -->
-  <script src="{{ asset('public/template/assets/js/main.js') }}"></script>
+  <script src="{{ asset('template/assets/js/main.js') }}"></script>
 </body>
 </html>

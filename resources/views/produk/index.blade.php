@@ -10,15 +10,15 @@
               <h1 class="text-center"><?php echo $title ?></h1>
               <hr>
             </div>
-              
 
-           <?php  
+
+           <?php
             if($produk) {
             foreach($produk as $produk) { ?>
             <div class="col-lg-4 col-md-6 col-sm-12 mb-4 produk text-center">
                   <figure class="thumnail">
                     <a href="{{ asset('produk/detail/'.$produk->slug_produk) }}">
-                      <img src="{{ asset('public/upload/image/'.$produk->gambar) }}" alt="<?php  echo $produk->nama_produk ?>" class="img-fluid img-thumbnail">
+                      <img src="{{ asset('upload/image/'.$produk->gambar) }}" alt="<?php  echo $produk->nama_produk ?>" class="img-fluid img-thumbnail">
                     </a>
                   </figure>
                   <div class="keterangan">
@@ -48,7 +48,7 @@
             <hr>
           </div>
             <div class="col-md-12">
-              
+
             </div>
       </div>
     </div>

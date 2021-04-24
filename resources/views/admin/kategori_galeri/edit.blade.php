@@ -7,8 +7,8 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 </div>
 <div class="modal-body">
-    
-<form action="{{ asset('admin/kategori_galeri/edit') }}" method="post" accept-charset="utf-8">
+
+<form action="{{ asset('admin_assets/kategori_galeri/edit') }}" method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 <input type="hidden" name="id_kategori_galeri" value="{{ $kategori_galeri->id_kategori_galeri }}">
 <div class="form-group row">

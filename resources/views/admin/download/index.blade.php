@@ -1,12 +1,12 @@
-<form action="{{ asset('admin/download/proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+<form action="{{ asset('admin_assets/download/proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 {{ csrf_field() }}
 <p class="btn-group">
   <button class="btn btn-danger" type="submit" name="hapus" onClick="check();" >
       <i class="fas fa-trash-alt"></i>
-    </button> 
-  <a href="{{ asset('admin/download/tambah') }}" class="btn btn-success ">
+    </button>
+  <a href="{{ asset('admin_assets/download/tambah') }}" class="btn btn-success ">
   <i class="fa fa-plus"></i> Tambah File</a>
-  
+
 </p>
 
 <div class="table-responsive mailbox-messages">
@@ -40,12 +40,12 @@
       </div>
     </td>
     <td>
-      <a href="{{ asset('admin/download/unduh/'.$download->id_download) }}" class="btn btn-success btn-sm" target="_blank"><i class="fa fa-download"></i> Download</a>
+      <a href="{{ asset('admin_assets/download/unduh/'.$download->id_download) }}" class="btn btn-success btn-sm" target="_blank"><i class="fa fa-download"></i> Download</a>
     </td>
     <td><?php echo $download->judul_download ?>
-      
+
       <br><small>
-      Link:<br> 
+      Link:<br>
       <textarea name="aa" class="form-control">{{ asset('download/unduh/'.$download->id_download) }}</textarea>
       </small>
 
@@ -58,9 +58,9 @@
     <td class="text-center"><?php echo $download->hits ?> Hits</td>
     <td>
       <div class="btn-group">
-        <a href="{{ asset('admin/download/edit/'.$download->id_download) }}" 
+        <a href="{{ asset('admin_assets/download/edit/'.$download->id_download) }}"
           class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
-          <a href="{{ asset('admin/download/delete/'.$download->id_download) }}" class="btn btn-danger btn-sm delete-link"><i class="fa fa-trash"></i></a>
+          <a href="{{ asset('admin_assets/download/delete/'.$download->id_download) }}" class="btn btn-danger btn-sm delete-link"><i class="fa fa-trash"></i></a>
         </div>
     </td>
 </tr>

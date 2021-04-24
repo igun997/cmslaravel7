@@ -14,11 +14,11 @@ $(function() {
     {
         var files = !!this.files ? this.files : [];
         if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
-        
+
         if (/^image/.test( files[0].type)){ // only image file
             var reader = new FileReader(); // instance of the FileReader
             reader.readAsDataURL(files[0]); // read the local file
-            
+
             reader.onloadend = function(){ // set image data as background of div
                 $("#imagePreview").css("background-image", "url("+this.result+")");
             }
@@ -38,11 +38,11 @@ $(function() {
     </div>
 @endif
 
-<form action="{{ asset('admin/konfigurasi/proses_icon') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin_assets/konfigurasi/proses_icon') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 <div class="row">
     <input type="hidden" name="id_konfigurasi" value="<?php echo $site->id_konfigurasi ?>">
-    
+
     <div class="col-md-6">
     <div class="form-group">
         <label>Upload a new icon</label>
@@ -50,12 +50,12 @@ $(function() {
         <div id="imagePreview"></div>
     </div>
     </div>
-    
+
     <div class="col-md-6 alert alert-success">
         <label>Your current icon</label><br>
-        <img src="{{ asset('public/upload/image/'.$site->icon) }}" style="max-width:200px; height:auto;">
+        <img src="{{ asset('upload/image/'.$site->icon) }}" style="max-width:200px; height:auto;">
     </div>
-    
+
     <div class="col-md-12">
     <input type="submit" name="submit" value="Simpan Icon Baru" class="btn btn-primary">
     <input type="reset" name="reset" value="Reset" class="btn btn-primary">

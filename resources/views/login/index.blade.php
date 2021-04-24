@@ -1,4 +1,4 @@
-<?php 
+<?php
 $site = DB::table('konfigurasi')->first();
 ?>
 <!DOCTYPE html>
@@ -11,20 +11,20 @@ $site = DB::table('konfigurasi')->first();
   <meta name="keywords" content="{{ $site->keywords }}">
   <meta name="author" content="{{ $site->namaweb }}">
   <title>{{ $title }}</title>
-  <link rel="shortcut icon" href="{{ asset('public/upload/image/'.$site->icon) }}">
+  <link rel="shortcut icon" href="{{ asset('upload/image/'.$site->icon) }}">
   <!-- Custom fonts for this template-->
-  <link href="{{ asset('public/admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('admin_assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="{{ asset('public/admin/css/sb-admin-2.css') }}" rel="stylesheet">
+  <link href="{{ asset('admin_assets/css/sb-admin-2.css') }}" rel="stylesheet">
   <!-- Bootstrap core JavaScript-->
-  <script src="{{ asset('public/admin/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('admin_assets/vendor/jquery/jquery.min.js') }}"></script>
   <!-- sweetalert -->
-  <script src="{{ asset('public/sweetalert/js/sweetalert.min.js') }}"></script>
-  <link rel="stylesheet" type="text/css" href="{{ asset('public/sweetalert/css/sweetalert.css') }}">
+  <script src="{{ asset('sweetalert/js/sweetalert.min.js') }}"></script>
+  <link rel="stylesheet" type="text/css" href="{{ asset('sweetalert/css/sweetalert.css') }}">
   <style type="text/css" media="screen">
     .bg-login-image, .bg-register-image, .bg-password-image {
-      background: url("{{ asset('public/upload/image/'.$site->gambar) }}");
+      background: url("{{ asset('upload/image/'.$site->gambar) }}");
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -46,7 +46,7 @@ $site = DB::table('konfigurasi')->first();
             <!-- Nested Row within Card Body -->
             <div class="row">
               <div class="col-md-12 text-center">
-                
+
               </div>
               <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
               <div class="col-lg-6">
@@ -78,7 +78,7 @@ $site = DB::table('konfigurasi')->first();
                     <button class="btn btn-primary btn-block btn-user" type="submit" name="submit">
                       <i class="fa fa-lock"></i> Login
                     </button>
-                                     
+
                   </form>                  <hr>
                   <div class="text-center">
                     <a class="small" href="{{ asset('login/lupa') }}">Lupa Password?</a> | <a class="small" href="{{ asset('/') }}">Kembali ke Beranda</a>
@@ -104,11 +104,11 @@ swal ( "Mohon maaf" ,  "<?php echo $message ?>" ,  "warning" )
 swal ( "Berhasil" ,  "<?php echo $message ?>" ,  "success" )
 @endif
 </script>
-  
-  <script src="{{ asset('public/admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+  <script src="{{ asset('admin_assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
   <!-- Core plugin JavaScript-->
-  <script src="{{ asset('public/admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+  <script src="{{ asset('admin_assets/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
   <!-- Custom scripts for all pages-->
-  <script src="{{ asset('public/admin/js/sb-admin-2.min.js') }}"></script>
+  <script src="{{ asset('admin_assets/js/sb-admin-2.min.js') }}"></script>
 </body>
 </html>

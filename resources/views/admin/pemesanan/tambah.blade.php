@@ -1,5 +1,5 @@
 <p class="text-right">
-  <a href="{{ asset('admin/pemesanan') }}" class="btn btn-success btn-sm">
+  <a href="{{ asset('admin_assets/pemesanan') }}" class="btn btn-success btn-sm">
     <i class="fa fa-backward"></i> Kembali
   </a>
 </p>
@@ -13,7 +13,7 @@
         </ul>
     </div>
 @endif
-<form action="{{ asset('admin/pemesanan/tambah_proses') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin_assets/pemesanan/tambah_proses') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
  {{ csrf_field() }}
 
 
@@ -30,7 +30,7 @@
       <option value="Konfirmasi" <?php if(isset($_POST['status_pemesanan']) && $_POST['status_pemesanan']=="Konfirmasi") { echo 'selected'; } ?>>Konfirmasi</option>
       <option value="Dikirim" <?php if(isset($_POST['status_pemesanan']) && $_POST['status_pemesanan']=="Dikirim") { echo 'selected'; } ?>>Dikirim</option>
       <option value="Selesai" <?php if(isset($_POST['status_pemesanan']) && $_POST['status_pemesanan']=="Selesai") { echo 'selected'; } ?>>Selesai</option>
-    </select>  
+    </select>
   </div>
 </div>
 

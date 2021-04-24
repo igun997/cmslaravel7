@@ -1,5 +1,5 @@
 <p class="text-right">
-	<a href="{{ asset('admin/galeri') }}" class="btn btn-success btn-sm">
+	<a href="{{ asset('admin_assets/galeri') }}" class="btn btn-success btn-sm">
 		<i class="fa fa-backward"></i> Kembali
 	</a>
 </p>
@@ -27,7 +27,7 @@ if(isset($error)) {
     </div>
 @endif
 
-<form action="{{ asset('admin/galeri/edit_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+<form action="{{ asset('admin_assets/galeri/edit_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 {{ csrf_field() }}
 <input type="hidden" name="id_galeri" value="{{ $galeri->id_galeri }}">
 <div class="row form-group">
@@ -53,7 +53,7 @@ if(isset($error)) {
 	<div class="col-md-3">
 		<select name="jenis_galeri" class="form-control">
 			<option value="Galeri">Galeri Biasa</option>
-			<option value="Homepage" 
+			<option value="Homepage"
 			<?php if($galeri->jenis_galeri=="Homepage") { echo "selected"; } ?>
 			>Homepage - Gambar Slider</option>
 			<option value="Pop up" <?php if($galeri->jenis_galeri=="Pop up") { echo "selected"; } ?>>Pop up Homepage</option>
@@ -68,7 +68,7 @@ if(isset($error)) {
 	<div class="col-md-9">
 		<select name="id_kategori_galeri" class="form-control">
 			<?php foreach($kategori_galeri as $kategori_galeri) { ?>
-				<option value="<?php echo $kategori_galeri->id_kategori_galeri ?>" 
+				<option value="<?php echo $kategori_galeri->id_kategori_galeri ?>"
 					<?php if($galeri->id_kategori_galeri==$kategori_galeri->id_kategori_galeri) { echo "selected"; } ?>
 					><?php echo $kategori_galeri->nama_kategori_galeri ?></option>
 				<?php } ?>
