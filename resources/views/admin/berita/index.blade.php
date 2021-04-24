@@ -1,4 +1,4 @@
-<form action="{{ asset('admin_assets/berita/proses') }}" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin/berita/proses') }}" method="post" accept-charset="utf-8">
 <?php $site   = DB::table('konfigurasi')->first(); ?>
 {{ csrf_field() }}
 <p class="btn-group">
@@ -15,7 +15,7 @@
   </button>
 
 
-    <a href="{{ asset('admin_assets/berita/tambah') }}" class="btn btn-success ">
+    <a href="{{ asset('admin/berita/tambah') }}" class="btn btn-success ">
   <i class="fa fa-plus"></i> Tambah Baru</a>
 
 </p>
@@ -58,7 +58,7 @@
       <?php } ?>
     </td>
     <td>
-    <a href="{{ asset('admin_assets/berita/edit/'.$berita->id_berita) }}">
+    <a href="{{ asset('admin/berita/edit/'.$berita->id_berita) }}">
     <?php echo $berita->judul_berita ?> <sup><i class="fa fa-pencil"></i></sup>
     </a>
       <small>
@@ -73,20 +73,20 @@
       </small>
     </td>
     <td>
-    <a href="{{ asset('admin_assets/berita/kategori/'.$berita->id_kategori) }}">
+    <a href="{{ asset('admin/berita/kategori/'.$berita->id_kategori) }}">
     <?php echo $berita->nama_kategori ?><sup><i class="fa fa-link"></i></sup>
     </a>
     </td>
     <td>
-    <a href="{{ asset('admin_assets/berita/jenis_berita/'.$berita->jenis_berita) }}">
+    <a href="{{ asset('admin/berita/jenis_berita/'.$berita->jenis_berita) }}">
     <?php echo $berita->jenis_berita ?><sup><i class="fa fa-link"></i></sup>
     </a></td>
-    <td><a href="{{ asset('admin_assets/berita/status_berita/'.$berita->status_berita) }}">
+    <td><a href="{{ asset('admin/berita/status_berita/'.$berita->status_berita) }}">
       <span class="btn btn-sm <?php if($berita->status_berita=="Publish") { echo 'btn-success'; }else{ echo 'btn-warning'; } ?> btn-block">
         <i class="fa <?php if($berita->status_berita=="Publish") { echo 'fa-check-circle'; }else{ echo 'fa-times'; } ?>"></i> <?php echo $berita->status_berita ?></span>
     </a></td>
     <td>
-    <a href="{{ asset('admin_assets/berita/author/'.$berita->id_user) }}">
+    <a href="{{ asset('admin/berita/author/'.$berita->id_user) }}">
     <?php echo $berita->nama ?><sup><i class="fa fa-link"></i></sup>
     </a></td>
     <td>
@@ -94,10 +94,10 @@
         <a href="{{ asset('berita/read/'.$berita->slug_berita) }}"
         class="btn btn-success btn-sm" target="_blank"><i class="fa fa-eye"></i></a>
 
-        <a href="{{ asset('admin_assets/berita/edit/'.$berita->id_berita) }}"
+        <a href="{{ asset('admin/berita/edit/'.$berita->id_berita) }}"
         class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
 
-        <a href="{{ asset('admin_assets/berita/delete/'.$berita->id_berita) }}" class="btn btn-danger btn-sm delete-link"><i class="fas fa-trash-alt"></i></a>
+        <a href="{{ asset('admin/berita/delete/'.$berita->id_berita) }}" class="btn btn-danger btn-sm delete-link"><i class="fas fa-trash-alt"></i></a>
       </div>
     </td>
 </tr>

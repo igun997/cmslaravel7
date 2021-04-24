@@ -10,7 +10,7 @@
 <p>
   @include('admin/user/tambah')
 </p>
-<form action="{{ asset('admin_assets/user/proses') }}" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin/user/proses') }}" method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 <div class="row">
 
@@ -64,10 +64,10 @@
     <td><?php echo $user->akses_level ?></td>
     <td>
         <div class="btn-group">
-        <a href="{{ asset('admin_assets/user/edit/'.$user->id_user) }}"
+        <a href="{{ asset('admin/user/edit/'.$user->id_user) }}"
           class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
 
-          <a href="{{ asset('admin_assets/user/delete/'.$user->id_user) }}" class="btn btn-danger btn-sm  delete-link">
+          <a href="{{ asset('admin/user/delete/'.$user->id_user) }}" class="btn btn-danger btn-sm  delete-link">
             <i class="fa fa-trash"></i></a>
         </div>
 

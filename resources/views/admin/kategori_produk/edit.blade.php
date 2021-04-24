@@ -8,7 +8,7 @@
 </div>
 <div class="modal-body">
 
-<form action="{{ asset('admin_assets/kategori_produk/edit') }}" enctype="multipart/form-data"  method="post" accept-charset="utf-8">
+<form action="{{ asset('admin/kategori_produk/edit') }}" enctype="multipart/form-data"  method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 <input type="hidden" name="id_kategori_produk"   value="{{ $kategori_produk->id_kategori_produk }}">
 

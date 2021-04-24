@@ -34,7 +34,7 @@
       <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#Edit<?php echo $kategori_produk->id_kategori_produk ?>">
     <i class="fa fa-edit"></i>
 </button>
-      <a href="{{ asset('admin_assets/kategori_produk/delete/'.$kategori_produk->id_kategori_produk) }}" class="btn btn-danger btn-sm delete-link"><i class="fas fa-trash-alt"></i></a>
+      <a href="{{ asset('admin/kategori_produk/delete/'.$kategori_produk->id_kategori_produk) }}" class="btn btn-danger btn-sm delete-link"><i class="fas fa-trash-alt"></i></a>
       </div>
       @include('admin/kategori_produk/edit')
     </td>

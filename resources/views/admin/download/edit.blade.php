@@ -1,5 +1,5 @@
 <p class="text-right">
-	<a href="{{ asset('admin_assets/download') }}" class="btn btn-success btn-sm">
+	<a href="{{ asset('admin/download') }}" class="btn btn-success btn-sm">
 		<i class="fa fa-backward"></i> Kembali
 	</a>
 </p>
@@ -14,7 +14,7 @@
         </ul>
     </div>
 @endif
-<form action="{{ asset('admin_assets/download/edit_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+<form action="{{ asset('admin/download/edit_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 {{ csrf_field() }}
 <input type="hidden" name="id_download" value="{{ $download->id_download }}">
 <div class="row form-group">

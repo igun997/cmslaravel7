@@ -1,5 +1,5 @@
 <p class="text-right">
-  <a href="{{ asset('admin_assets/berita') }}" class="btn btn-success btn-sm">
+  <a href="{{ asset('admin/berita') }}" class="btn btn-success btn-sm">
     <i class="fa fa-backward"></i> Kembali
   </a>
 </p>
@@ -14,7 +14,7 @@
     </div>
 @endif
 
-<form action="{{ asset('admin_assets/berita/tambah_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+<form action="{{ asset('admin/berita/tambah_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 {{ csrf_field() }}
 <div class="row form-group">
   <label class="col-md-3">Judul berita/profil/layanan</label>

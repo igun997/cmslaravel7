@@ -1,12 +1,12 @@
 <?php if($pemesanan) { ?>
 <div class="row">
 <div class="col-md-6">
-    <form action="{{ asset('admin_assets/pemesanan/cari') }}" method="get" accept-charset="utf-8">
+    <form action="{{ asset('admin/pemesanan/cari') }}" method="get" accept-charset="utf-8">
     <div class="input-group mb-3">
       <input type="text" class="form-control" name="keywords" value="<?php if(isset($_GET['keywords'])) { echo $_GET['keywords']; } ?>" placeholder="Cari..." required>
       <span class="input-group-append">
             <button type="submit" name="cari" class="btn btn-info" value="cari">Cari</button>
-            <a href="{{ asset('admin_assets/pemesanan/tambah') }}" class="btn btn-success ">
+            <a href="{{ asset('admin/pemesanan/tambah') }}" class="btn btn-success ">
               <i class="fa fa-plus"></i> Tambah Baru
             </a>
       </span>
@@ -19,7 +19,7 @@
 
 </div>
 
-<form action="{{ asset('admin_assets/pemesanan/proses') }}" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin/pemesanan/proses') }}" method="post" accept-charset="utf-8">
   {{ csrf_field() }}
 <input type="hidden" name="pengalihan" value="{{ url()->full() }}">
 <div class="row">
@@ -121,7 +121,7 @@
         $icon   = 'fa-check-circle';
       }
       ?>
-      <a href="{{ asset('admin_assets/pemesanan/status_pemesanan/'.$pemesanan->status_pemesanan) }}" class="btn btn-sm btn-block {{ $class }}">
+      <a href="{{ asset('admin/pemesanan/status_pemesanan/'.$pemesanan->status_pemesanan) }}" class="btn btn-sm btn-block {{ $class }}">
         <i class="fa  {{ $icon }}"></i> <?php echo $pemesanan->status_pemesanan ?>
       </a>
       <small>
@@ -175,13 +175,13 @@
 
     <td>
       <div class="btn-group">
-        <a href="{{ asset('admin_assets/pemesanan/edit/'.$pemesanan->id_pemesanan) }}" class="btn btn-success btn-block btn-sm"><i class="fa fa-check"></i> Update Status</a>
+        <a href="{{ asset('admin/pemesanan/edit/'.$pemesanan->id_pemesanan) }}" class="btn btn-success btn-block btn-sm"><i class="fa fa-check"></i> Update Status</a>
       </div>
       <div class="clearfix"><hr></div>
       <div class="btn-group">
-        <a href="{{ asset('admin_assets/pemesanan/detail/'.$pemesanan->id_pemesanan) }}" class="btn btn-secondary btn-sm" target="_blank"><i class="fa fa-eye"></i></a>
-        <a href="{{ asset('admin_assets/pemesanan/cetak/'.$pemesanan->id_pemesanan) }}" class="btn btn-info btn-sm" target="_blank"><i class="fa fa-print"></i></a>
-        <a href="{{ asset('admin_assets/pemesanan/delete/'.$pemesanan->id_pemesanan) }}" class="btn btn-danger btn-sm delete-link"><i class="fas fa-trash-alt"></i></a>
+        <a href="{{ asset('admin/pemesanan/detail/'.$pemesanan->id_pemesanan) }}" class="btn btn-secondary btn-sm" target="_blank"><i class="fa fa-eye"></i></a>
+        <a href="{{ asset('admin/pemesanan/cetak/'.$pemesanan->id_pemesanan) }}" class="btn btn-info btn-sm" target="_blank"><i class="fa fa-print"></i></a>
+        <a href="{{ asset('admin/pemesanan/delete/'.$pemesanan->id_pemesanan) }}" class="btn btn-danger btn-sm delete-link"><i class="fas fa-trash-alt"></i></a>
       </div>
     </td>
   </tr>

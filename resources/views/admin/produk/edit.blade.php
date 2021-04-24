@@ -1,5 +1,5 @@
 <p class="text-right">
-	<a href="{{ asset('admin_assets/produk') }}" class="btn btn-success btn-sm">
+	<a href="{{ asset('admin/produk') }}" class="btn btn-success btn-sm">
 		<i class="fa fa-backward"></i> Kembali
 	</a>
 </p>
@@ -27,7 +27,7 @@ if(isset($error)) {
     </div>
 @endif
 
-<form action="{{ asset('admin_assets/produk/edit_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+<form action="{{ asset('admin/produk/edit_proses') }}" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 {{ csrf_field() }}
 <input type="hidden" name="id_produk" value="{{ $produk->id_produk }}">
 <div class="form-group row">

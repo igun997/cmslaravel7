@@ -1,5 +1,5 @@
 <p class="text-right">
-  <a href="{{ asset('admin_assets/pemesanan') }}" class="btn btn-success btn-sm">
+  <a href="{{ asset('admin/pemesanan') }}" class="btn btn-success btn-sm">
     <i class="fa fa-backward"></i> Kembali
   </a>
 </p>
@@ -13,7 +13,7 @@
         </ul>
     </div>
 @endif
-<form action="{{ asset('admin_assets/pemesanan/edit_proses') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin/pemesanan/edit_proses') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
  {{ csrf_field() }}
 <input type="hidden" name="id_pemesanan" value="{{ $pemesanan->id_pemesanan }}">
 

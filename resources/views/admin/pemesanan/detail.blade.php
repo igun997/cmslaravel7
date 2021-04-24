@@ -1,11 +1,11 @@
 <p class="text-right">
-	<a href="{{ asset('admin_assets/pemesanan/edit/'.$pemesanan->id_pemesanan) }}" class="btn btn-warning btn-sm">
+	<a href="{{ asset('admin/pemesanan/edit/'.$pemesanan->id_pemesanan) }}" class="btn btn-warning btn-sm">
 		<i class="fa fa-edit"></i> Update Status
 	</a>
-	<a href="{{ asset('admin_assets/pemesanan/cetak/'.$pemesanan->id_pemesanan) }}" class="btn btn-info btn-sm">
+	<a href="{{ asset('admin/pemesanan/cetak/'.$pemesanan->id_pemesanan) }}" class="btn btn-info btn-sm">
 		<i class="fa fa-print"></i> Cetak
 	</a>
-	<a href="{{ asset('admin_assets/pemesanan') }}" class="btn btn-success btn-sm">
+	<a href="{{ asset('admin/pemesanan') }}" class="btn btn-success btn-sm">
 		<i class="fa fa-backward"></i> Kembali
 	</a>
 </p>

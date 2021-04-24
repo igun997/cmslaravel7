@@ -10,7 +10,7 @@
 <p>
   @include('admin/video/tambah')
 </p>
-<form action="{{ asset('admin_assets/video/proses') }}" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin/video/proses') }}" method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 <div class="row">
 
@@ -67,10 +67,10 @@
     <td><?php echo $video->posisi ?></td>
     <td>
         <div class="btn-group">
-        <a href="{{ asset('admin_assets/video/edit/'.$video->id_video) }}"
+        <a href="{{ asset('admin/video/edit/'.$video->id_video) }}"
           class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
 
-          <a href="{{ asset('admin_assets/video/delete/'.$video->id_video) }}" class="btn btn-danger btn-sm  delete-link">
+          <a href="{{ asset('admin/video/delete/'.$video->id_video) }}" class="btn btn-danger btn-sm  delete-link">
             <i class="fa fa-trash"></i></a>
         </div>
 

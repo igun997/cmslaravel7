@@ -8,7 +8,7 @@
     </div>
 @endif
 
-<form action="{{ asset('admin_assets/video/proses_edit') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin/video/proses_edit') }}" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 <input type="hidden" name="id_video" value="<?php echo $video->id_video ?>">
 <div class="form-group row">
@@ -68,7 +68,7 @@
 		<div class="form-group pull-right btn-group">
 			<input type="submit" name="submit" class="btn btn-primary " value="Simpan Data">
 			<input type="reset" name="reset" class="btn btn-success " value="Reset">
-			<a href="{{ asset('admin_assets/video') }}" class="btn btn-danger">Kembali</a>
+			<a href="{{ asset('admin/video') }}" class="btn btn-danger">Kembali</a>
 		</div>
 	</div>
 	<div class="clearfix"></div>
