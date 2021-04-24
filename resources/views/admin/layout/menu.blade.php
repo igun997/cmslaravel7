@@ -80,19 +80,19 @@ $nav_pemesanan        = DB::table('pemesanan')
         <li class="nav-item dropdown no-arrow">
           <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo Session()->get('nama'); ?> (<?php echo Session()->get('akses_level'); ?>)</span>
-            <img class="img-profile rounded-circle" src="http://localhost/nitrico/assets/upload/user/thumbs/testimonials-1.jpg">
+            <img class="img-profile rounded-circle" src="/assets/upload/user/thumbs/testimonials-1.jpg">
           </a>
           <!-- Dropdown - User Information -->
           <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="http://localhost/nitrico/admin/akun">
+            <a class="dropdown-item" href="/admin/akun">
               <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
               Update Profile
             </a>
-                        <a class="dropdown-item" href="http://localhost/nitrico/admin/konfigurasi">
+                        <a class="dropdown-item" href="/admin/konfigurasi">
               <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
               Setting Website
             </a>
-            <a class="dropdown-item" href="http://localhost/nitrico/admin/activity">
+            <a class="dropdown-item" href="/admin/activity">
               <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
               Activity Log
             </a>
