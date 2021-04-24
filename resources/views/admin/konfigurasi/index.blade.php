@@ -10,7 +10,7 @@
     </div>
 @endif
 
-<form action="{{ asset('admin_assets/konfigurasi/proses') }}" method="post" accept-charset="utf-8">
+<form action="{{ asset('admin/konfigurasi/proses') }}" method="post" accept-charset="utf-8">
 {{ csrf_field() }}
 
 <div class="row">
